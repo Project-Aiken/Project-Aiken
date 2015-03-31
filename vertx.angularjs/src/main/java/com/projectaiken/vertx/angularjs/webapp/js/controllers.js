@@ -2,8 +2,8 @@ angbootApp.controller('AppCtrl', function AppCtrl($scope, $location, $rootScope,
 	$scope.getLinkedInData = function() {
 		if(!$scope.hasOwnProperty("userprofile")){
 			IN.API.Profile("me").fields(
-					[ "id", "firstName", "lastName", "pictureUrl",
-							"publicProfileUrl" ]).result(function(result) {
+					[ "id", "first-Name", "last-Name", "picture-Url",
+							"skills", "positions" ]).result(function(result) {
 				// set the model
 				$rootScope.$apply(function() {
 					var userprofile =result.values[0]
